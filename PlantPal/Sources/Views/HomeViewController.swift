@@ -211,7 +211,7 @@ class HomeViewController: UIViewController {
         let completeButton = UIButton(type: .system)
         completeButton.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)
         completeButton.tintColor = ThemeService.shared.colors.primary
-        completeButton.tag = task.hashValue
+        completeButton.tag = task.id.hashValue
         completeButton.addTarget(self, action: #selector(taskCompleted(_:)), for: .touchUpInside)
         container.addSubview(completeButton)
         
@@ -245,7 +245,7 @@ class HomeViewController: UIViewController {
     
     @objc private func taskCompleted(_ sender: UIButton) {
         let tasks = DataService.shared.loadTasks()
-        if let task = tasks.first(where: { $0.hashValue == sender.tag }) {
+        if let task = tasks.first(where: { $0.id.hashValue == sender.tag }) {
             DataService.shared.completeTask(task.id)
             loadTasks()
         }
