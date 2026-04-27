@@ -25,7 +25,8 @@ final class PlantPalScreenshotTests: XCTestCase {
     
     func capture(_ name: String) {
         let path = "/tmp/PlantPal_\(name).png"
-        let data = app.windows.firstMatch.screenshot().pngRepresentation
+        let screenshot = XCUIScreen.main.screenshot()
+        let data = screenshot.pngRepresentation
         try? data.write(to: URL(fileURLWithPath: path))
         print("Screenshot saved: \(path)")
     }
