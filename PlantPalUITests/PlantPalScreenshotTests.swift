@@ -54,9 +54,8 @@ final class PlantPalScreenshotTests: XCTestCase {
         let timestamp = formatter.string(from: Date())
         let filename = "/tmp/PlantPal_\(name)_\(timestamp).png"
         
-        if let data = screenshot.pngRepresentation {
-            try? data.write(to: URL(fileURLWithPath: filename))
-            print("Screenshot saved: \(filename)")
-        }
+        let data = screenshot.pngRepresentation
+        try? data.write(to: URL(fileURLWithPath: filename))
+        print("Screenshot saved: \(filename)")
     }
 }
