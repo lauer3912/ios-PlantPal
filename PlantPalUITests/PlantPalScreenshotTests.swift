@@ -48,7 +48,7 @@ final class PlantPalScreenshotTests: XCTestCase {
     }
     
     private func capture(_ name: String) {
-        let screenshot = app.windows.firstMatch.screenshot()
+        let screenshot = XCUIScreen.main.screenshot()
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd_HHmmss"
         let timestamp = formatter.string(from: Date())
