@@ -152,7 +152,7 @@ struct TemperatureRange: Codable {
     let ideal: Int
     
     var display: String {
-        "\(min)-\(max)°F (ideal: \(ideal°F))"
+        "\(min)-\(max) F (ideal: \(ideal) F)"
     }
 }
 
