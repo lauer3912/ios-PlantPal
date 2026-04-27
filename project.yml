@@ -36,6 +36,7 @@ targets:
         CODE_SIGN_STYLE: Automatic
         CODE_SIGNING_ALLOWED: NO
         DEVELOPMENT_TEAM: "9L6N2ZF26B"
+        CODE_SIGN_ENTITLEMENTS: PlantPal/PlantPal.entitlements
         LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks"
         TARGETED_DEVICE_FAMILY: "1,2"
         SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: YES
